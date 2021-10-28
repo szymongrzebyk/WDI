@@ -24,3 +24,7 @@ if(goingToCrashIntoEachOther){
 dont();
 }
 ```
+
+Fine, there will be a cat image:
+
+![Image of cat, found in Google](laboratorium_2/Cat.jpg)
