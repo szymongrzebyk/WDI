@@ -19,7 +19,7 @@ Ways to  do so
   - etc.
 
 ###### THEY USED CODING AND ALGORITHMS SO THE DRONES DIDN'T CRASH INTO EACH OTHER
-```python
+```python:
 if(goingToCrashIntoEachOther){
 dont();
 }
