@@ -4,6 +4,8 @@ Repository made to store and manage all tasks got during the Wstep Do Informatyk
 **Szymon Grzebyk**
 
 Academy website: [AGH](https://www.agh.edu.pl/)
+
+Home page: [Paweł Jemioło](https://home.agh.edu.pl/~pawljmlo/didactics/intro/2021/3)
 ##### List of things to learn
 1. Markdown
 2. Using GitHub with PyCharm
