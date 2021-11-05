@@ -14,5 +14,5 @@ if zakres > 20:
         for i in range(int((zakres + 1)/2 + 1), int((zakres + 1)/2 + 3)):
             print(i)
 else:
-    for i in  range(beginning, ending + 1):
+    for i in range(beginning, ending + 1):
         print(i)
