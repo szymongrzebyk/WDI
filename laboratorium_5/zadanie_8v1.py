@@ -16,8 +16,8 @@ def dzielnik(number, start, end, suma):
 # liczba = int(input("Wpisz liczbę, którą chcesz sprawdzić: "))
 wynik = 1
 
-for i in range(2, 1000000, 2):
-    # if i % 10000 == 0:
-        # print("Sprawdzam", i)
+for i in range(2, 1000000, 2):  # Nie znaleziono dotąd nieparzystej liczby doskonałej
+    if i % 10000 == 0:
+        print("Sprawdzam", i)
     if i == dzielnik(i, 2, int(i/2), wynik):
         print(i)
