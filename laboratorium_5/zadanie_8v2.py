@@ -12,7 +12,7 @@ def makePerfect(number):
     return 0
 
 
-for i in range(31):
+for i in range(11):
     if isPrime(i):
         liczba = makePerfect(i)
         if liczba > 0:
