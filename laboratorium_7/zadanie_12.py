@@ -1,3 +1,7 @@
+class OperationCharacterError(Exception):
+    pass
+
+
 def changeIntoList(userInput):
     listedInput = []
     while userInput > 0:
@@ -44,33 +48,35 @@ def subtraction(minuend, subtrahend):  #   minuend znaczy odjemna, subtrahend zn
     return result
 
 
-
 number1 = int(input("Proszę podać pierwszą liczbę: "))
 number2 = int(input("Proszę podać drugą liczbę: "))
 action = input("Proszę podać znak dxziałania (+ lub -): ")
 listedNumber1 = changeIntoList(number1)
 listedNumber2 = changeIntoList(number2)
-# listedNumber1 = adjustLength(listedNumber1, listedNumber2)
-# listedNumber2 = adjustLength(listedNumber2, listedNumber1)
 print(listedNumber1)
 print(listedNumber2)
-if action == '+':
-    addedNumbers = addition(listedNumber1, listedNumber2)
-    print(addedNumbers)
-elif action == '-':
-    if len(listedNumber1) > len(listedNumber2):
-        subtractedNumbers = subtraction(listedNumber1, listedNumber2)
-    elif len(listedNumber1) < len(listedNumber2):
-        subtractedNumbers = subtraction(listedNumber2, listedNumber1)
+try:
+    if action == '+':
+        addedNumbers = addition(listedNumber1, listedNumber2)
+        print(addedNumbers)
+    elif action == '-':
+        if len(listedNumber1) > len(listedNumber2):
+            subtractedNumbers = subtraction(listedNumber1, listedNumber2)
+        elif len(listedNumber1) < len(listedNumber2):
+            subtractedNumbers = subtraction(listedNumber2, listedNumber1)
+        else:
+            for i in range(len(listedNumber1)):
+                if listedNumber1[i] > listedNumber2[i]:
+                    subtractedNumbers = subtraction(listedNumber1, listedNumber2)
+                    break
+                elif listedNumber1[i] < listedNumber2[i]:
+                    subtractedNumbers = subtraction(listedNumber2, listedNumber1)
+                    break
+                elif i == (len(listedNumber1) - 1) and listedNumber1[i] == listedNumber2[i]:
+                    subtractedNumbers = subtraction(listedNumber1, listedNumber2)
+                    break
+        print(subtractedNumbers)
     else:
-        for i in range(len(listedNumber1)):
-            if listedNumber1[i] > listedNumber2[i]:
-                subtractedNumbers = subtraction(listedNumber1, listedNumber2)
-                break
-            elif listedNumber1[i] < listedNumber2[i]:
-                subtractedNumbers = subtraction(listedNumber2, listedNumber1)
-                break
-            elif i == len(listedNumber1) and listedNumber1[i] == listedNumber2[i]:
-                subtractedNumbers = subtraction(listedNumber1, listedNumber2)
-                break
-    print(subtractedNumbers)
+        raise OperationCharacterError
+except OperationCharacterError:
+    print("Możliwe jest tylko działanie dodawania i odejmowania!")

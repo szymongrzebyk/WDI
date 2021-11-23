@@ -1,11 +1,4 @@
 # Na potrzeby kodu termin special oznacza, że liczba jest dwu-trzy-piątkowa
-def correctInput(input):
-    if input.isdigit():
-        return True
-    else:
-        print("Musisz podać liczbę całkowitą.")
-        return False
-
 
 def isSpecial(number):
     if number % 5 == 0:
@@ -25,13 +18,13 @@ def isSpecial(number):
 
 zakres = 1
 specialAmount = 0
-correctType = False
-while not correctType:
-    zakres = input("Podaj do jakiej liczby włącznie chcesz policzyć lilczby dwu-trzy-piątkowe:")
-    correctType = correctInput(zakres)
-    if correctType:
-        zakres = int(zakres)
+while True:
+    try:
+        zakres = int(input("Podaj do jakiej liczby włącznie chcesz policzyć lilczby dwu-trzy-piątkowe:"))
+        break
+    except ValueError:
+        print("Musisz podać liczbę całkowitą.")
 for i in range(1, zakres + 1):
     if isSpecial(i):
         specialAmount += 1
-print("W podanym przedziale jest", specialAmount, "liczby dwu-trzy-piątkowych.")
+print("W podanym przedziale jest", specialAmount, "liczb dwu-trzy-piątkowych.")
