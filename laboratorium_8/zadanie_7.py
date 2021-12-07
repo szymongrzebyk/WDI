@@ -46,7 +46,7 @@ def coprime(number1, number2):
 # list = [2, 23, 33, 35, 7, 4, 6, 7, 5, 11, 13, 22]
 # list = [5, 5, 5, 5, 5, 8, 2, 3, 45, 7, 11, 13, 17, 19, 23, 29, 46, 8]
 # list = [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
-# list = [1, 1, 1, 32, 1, 1, 1, 1]
+list = [1, 1, 1, 32, 1, 1, 1, 1]
 biggestLength = 0
 longestSubstringBeginning = 0
 tempSubstringEnd = 1
