@@ -1,0 +1,2 @@
+If we accept the definition that a word is some letters, surrounded by a gap, then xnopyt, aaaaaaaajjjjjjjjj are the words, despite being pretty much meaningless.
+So this program counts words using that definition and every letter between spaces will be accepted.
