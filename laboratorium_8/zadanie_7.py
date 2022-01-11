@@ -21,12 +21,12 @@ def jednokrotna(liczba):
     return True
 
 
-def euklides(bigger, lesser):   # if those numbers are equal their order doesn't matter
+def euklides(bigger, lesser, carry):   # if those numbers are equal their order doesn't matter
     wynik = bigger % lesser
-    if wynik == 1 or wynik == 0:
-        return wynik
+    if wynik == 0:
+        return carry
     else:
-        return euklides(lesser, wynik)
+        return euklides(lesser, wynik, wynik)
 
 
 def coprime(number1, number2):
