@@ -14,23 +14,19 @@ def organize(num1, num2):
         return num2, num1
 
 
-while True:
-    try:
-        first = int(input("Podaj pierwszą liczbę:"))
-        if first <= 0:
-            raise ValueError
-        break
-    except ValueError:
-        print("Musisz podać dodatnią liczbę całkowitą!")
+def getNumber():
+    while True:
+        try:
+            number = 10
+            # number = int(input("Podaj liczbę:"))
+            if number <= 0:
+                raise ValueError
+            break
+        except ValueError:
+            print("Musisz podać dodatnią liczbę całkowitą!")
+    return number
 
-while True:
-    try:
-        second = int(input("Podaj drugą liczbę:"))
-        if second <= 0:
-            raise ValueError
-        break
-    except ValueError:
-        print("Musisz podać dodatnią liczbę całkowitą!")
-
+first = getNumber()
+second = getNumber()
 organized = organize(first, second)  # getting tuple, bigger than lesser
 print("NWD liczb", organized, "równa się", euklides(organized[0], organized[1]))

@@ -1,7 +1,8 @@
 def handleFile():
     while True:
         try:
-            filename = input("Insert filename or filepath: ")
+            filename = "Text.txt"
+            # filename = input("Insert filename or filepath: ")
             file = open(filename, "r")
             break
         except FileNotFoundError:
