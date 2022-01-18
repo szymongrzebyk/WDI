@@ -7,6 +7,6 @@ def test_divisibility():
     assert dividesOnce(4500, 6) == False
 
 
-def test_jeednokrotnosc():
+def test_jednokrotnosc():
     assert jednokrotna(210) == True
     assert jednokrotna(4) == False

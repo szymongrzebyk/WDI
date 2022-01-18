@@ -18,12 +18,12 @@ def isSpecial(number):
 
 zakres = 1
 specialAmount = 0
-while True:
-    try:
-        zakres = int(input("Podaj do jakiej liczby włącznie chcesz policzyć lilczby dwu-trzy-piątkowe:"))
-        break
-    except ValueError:
-        print("Musisz podać liczbę całkowitą.")
+# while True:
+#     try:
+#         zakres = int(input("Podaj do jakiej liczby włącznie chcesz policzyć lilczby dwu-trzy-piątkowe:"))
+#         break
+#     except ValueError:
+#         print("Musisz podać liczbę całkowitą.")
 for i in range(1, zakres + 1):
     if isSpecial(i):
         specialAmount += 1

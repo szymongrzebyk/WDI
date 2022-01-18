@@ -4,7 +4,7 @@ import unittest
 
 class NWDTest(unittest.TestCase):
     def test_number_getting(self):
-        self.assertRaises(ValueError, getNumber(), True)
+        self.assertRaises(ValueError, getNumber)
 
     def test_organizing(self):
         self.assertEqual(organize(5, 10), (10, 5))
