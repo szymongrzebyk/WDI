@@ -1,4 +1,6 @@
 def isPrime(number):
+    if number < 2:
+        return False
     for dzielnik in range(2, number - 1):
         if number % dzielnik == 0:
             return False
@@ -13,7 +15,7 @@ def dividesOnce(number, factor):
 
 
 def jednokrotna(liczba):
-    for index in range (2, liczba):
+    for index in range(2, liczba):
         if isPrime(index):
             if liczba % index == 0:
                 if not dividesOnce(liczba, index):
@@ -21,12 +23,12 @@ def jednokrotna(liczba):
     return True
 
 
-def euklides(bigger, lesser, carry):   # if those numbers are equal their order doesn't matter
+def euklides(bigger, lesser):   # if those numbers are equal their order doesn't matter
     wynik = bigger % lesser
     if wynik == 0:
-        return carry
+        return lesser
     else:
-        return euklides(lesser, wynik, wynik)
+        return euklides(lesser, wynik)
 
 
 def coprime(number1, number2):
@@ -44,9 +46,9 @@ def coprime(number1, number2):
 
 # list = [15, 45, 58, 548, 248, 5, 8, 8, 7, 5, 4, 8, 5, 858, 45, 98, 2]
 # list = [2, 23, 33, 35, 7, 4, 6, 7, 5, 11, 13, 22]
-# list = [5, 5, 5, 5, 5, 8, 2, 3, 45, 7, 11, 13, 17, 19, 23, 29, 46, 8]
+list = [5, 5, 5, 5, 5, 8, 2, 3, 45, 7, 11, 13, 17, 19, 23, 29, 46, 8]
 # list = [8, 8, 8, 8, 8, 8, 8, 8, 8, 8]
-list = [1, 1, 1, 32, 1, 1, 1, 1]
+# list = [1, 1, 1, 32, 1, 1, 1, 1]
 biggestLength = 0
 longestSubstringBeginning = 0
 tempSubstringEnd = 1
